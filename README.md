@@ -23,7 +23,7 @@ Built with **Java 17**, **Thymeleaf**, **Spring Data JPA**, **Spring Security**,
 
 ---
 Project Structure
-
+```text
 src/main/java/com/catalog_museum
  ├─ controller/      # Web controllers (routes)
  ├─ service/         # Business logic
@@ -33,7 +33,7 @@ src/main/java/com/catalog_museum
 src/main/resources
  ├─ templates/       # Thymeleaf views
  └─ static/          # CSS/JS/images
-
+```
 
 
 ## Setup
@@ -41,15 +41,13 @@ src/main/resources
 1. **Database**
    ```sql
    CREATE DATABASE museumdb;
-Edit src/main/resources/application.properties:
+Edit 
+ src/main/resources/application.properties:
+ ```java
   spring.datasource.url=jdbc:postgresql://localhost:5432/museumdb
   spring.datasource.username=postgres
   spring.datasource.password=YOUR_PASSWORD
   spring.jpa.hibernate.ddl-auto=update
-
+```
 2. Build & Run
   ./mvnw spring-boot:run
-
-3. Build JAR
-  ./mvnw clean package
-  java -jar target/Katalog_Museum-0.0.1-SNAPSHOT.jar
